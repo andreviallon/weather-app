@@ -1,0 +1,16 @@
+.header-container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+    padding: 0 2rem;
+    border-bottom: 2px solid #F2F2F5;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}

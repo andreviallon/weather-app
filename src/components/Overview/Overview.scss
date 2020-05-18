@@ -1,0 +1,24 @@
+h2 {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.city {
+    background: linear-gradient(to right, #5EE8A5 0%, #59BFC2 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 2.3rem;
+    font-weight: 700;
+}
+
+.country {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #aaa;
+}

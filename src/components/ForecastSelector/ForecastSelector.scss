@@ -1,0 +1,16 @@
+.forecast-selector-container {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #aaa;
+
+    span {
+        padding: 0 1rem;
+        cursor: pointer;
+    }
+    
+    .active {
+        color: #222;
+        font-weight: 600;
+    }
+}

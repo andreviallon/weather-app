@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <div className="row overview-container m-4">
+        <div className="row overview-container mt-4">
           <Overview />
           <CurrentWeather />
         </div>

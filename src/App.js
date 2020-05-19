@@ -11,12 +11,16 @@ function App() {
     <div className="App">
       <Header />
       <div className="container">
-        <Overview />
-        <CurrentWeather />
+        <div className="row overview-container m-4">
+          <Overview />
+          <CurrentWeather />
+        </div>
       </div>
-      <div className="divider"></div>
+      <hr className="my-4" />
       <div className="container">
-        <Forecast />
+        <div className="row overview-container">
+          <Forecast />
+        </div>  
       </div>
     </div>
   );

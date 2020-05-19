@@ -1,8 +1,18 @@
-.card-container {
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    background-color: red;
+.card {
+    margin: 0 0 1rem;
+    min-width: 14%;
+}
+
+.card-title {
+    text-align: center;
+    margin: 0;
+}
+
+.temperature-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.min-temp {
+    color: #aaa;
 }

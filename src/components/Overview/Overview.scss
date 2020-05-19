@@ -1,4 +1,4 @@
-h2 {
+.overview {
     color: #aaa;
     font-size: 0.9rem;
 }
@@ -10,7 +10,7 @@ h2 {
 }
 
 .city {
-    background: linear-gradient(to right, #5EE8A5 0%, #59BFC2 100%);
+    background: linear-gradient(to right, #1985F9 0%, #035CBB 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-size: 2.3rem;
@@ -18,7 +18,7 @@ h2 {
 }
 
 .country {
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     font-size: 0.9rem;
     color: #aaa;
 }

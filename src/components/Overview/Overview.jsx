@@ -5,10 +5,10 @@ import './Overview.scss';
 export const Overview = () => {
     return (
         <div className="flex-container">
-            <h2>Overview</h2>
+            <span className="overview">Overview</span>
             <div className="flex-container">
-                <div className="city">New York City</div>
-                <div className="country">USA</div>
+                <span className="city">New York City</span>
+                <span className="country">USA</span>
             </div>
         </div>
     )

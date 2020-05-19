@@ -4,9 +4,13 @@ import './ForecastSelector.scss';
 
 export const ForecastSelector = () => {
     return (
-        <div className="forecast-selector-container">
-            <span className="forecast-selector">Today</span>
-            <span className="forecast-selector active">Week</span>
-        </div>
+        <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li className="nav-item" role="presentation">
+                <a className="nav-link active" href="/" role="tab">Today</a>
+            </li>
+            <li className="nav-item" role="presentation">
+                <a className="nav-link" href="/" role="tab">Next 7 days</a>
+            </li>
+        </ul>
     );
 }

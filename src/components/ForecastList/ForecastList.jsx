@@ -1,69 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ForecastList.scss';
 
 import { ForecastCard } from '../ForecastCard/ForecastCard';
+import { API_KEY } from '../../utils/api';
+
+const LATITUDE = '55.6761';
+const LONGITUDE = '12.5683';
+const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=-${LONGITUDE}&appid=${API_KEY}`;
+
 
 export const ForecastList = () => {
 
-    const forecasts = [
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "01n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        },
-        {
-            day: 'Sunday',
-            maxTemp: "15",
-            minTemp: "-3",
-            main: "Rain",
-            icon: "10n"
-        }
-    ]
+    const [dailyForecasts, setDailyForecasts] = useState([]);
+
+    useEffect(() => {
+        fetch(FORECAST_API)
+            .then(response => response.json())
+            .then(json => setDailyForecasts(json.daily));
+    }, []);
+
+    console.log('dailyForecasts', dailyForecasts);
 
     return (
         <div className="forecast-list-container">
-            {forecasts.map((forecast, index) => (
+            {dailyForecasts.map((forecast, index) => (
                 <ForecastCard
                     key={index}
-                    forecast={forecast}
-                />
+                    forecast={forecast} />
             ))}
         </div>
     );

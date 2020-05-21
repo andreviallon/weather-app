@@ -7,7 +7,7 @@ export const Forecast = () => {
 
     return (
         <div className="forecast-container">
-            <h5 className="mb-4">Next 7 days forecast</h5>
+            <h5 className="mb-4">Next week's forecast</h5>
             <ForecastList />
         </div>
     );

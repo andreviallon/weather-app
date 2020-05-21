@@ -20,7 +20,7 @@ function App() {
       <div className="container">
         <div className="row overview-container">
           <Forecast />
-        </div>  
+        </div>
       </div>
     </div>
   );

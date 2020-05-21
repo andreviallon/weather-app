@@ -19,8 +19,6 @@ export const ForecastList = () => {
             .then(json => setDailyForecasts(json.daily));
     }, []);
 
-    console.log('dailyForecasts', dailyForecasts);
-
     return (
         <div className="forecast-list-container">
             {dailyForecasts.map((forecast, index) => (

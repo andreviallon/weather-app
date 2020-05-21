@@ -1,6 +1,21 @@
 .card {
+    cursor: pointer;
     margin: 0 0 1rem;
-    min-width: 14%;
+    min-width: 23% !important;
+    box-shadow:
+    0 0 1px 0 rgba(0,0,0,0.08),
+    0 6px 12px 0 rgba(0,0,0,0.07),
+    0 1px 1px 0 rgba(0,0,0,0.07);
+    border: 1px solid rgba(0, 0, 0, 0.025) !important;
+    border-radius: 10px !important;
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+
+.card-body {
+    text-align: center;
 }
 
 .card-title {

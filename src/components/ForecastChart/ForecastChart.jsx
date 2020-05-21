@@ -49,5 +49,12 @@ export const ForecastChart = () => {
             }
         ]
     };
-    return <Line data={data} />;
+    return (
+        <div className="container">
+            <div className="row">
+                <h5 className="mb-4">Next 48 hours</h5>
+                <Line data={data} />
+            </div>
+        </div>
+    );
 }

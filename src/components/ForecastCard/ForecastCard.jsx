@@ -14,8 +14,14 @@ export const ForecastCard = ({ forecast }) => {
                 <h5 className="card-title"><Moment unix format="DD MMM">{forecast.dt}</Moment></h5>
                 <img className="forecast-img" src={imgUrl} alt="forecast icon" />
                 <div className="temperature-container mt-2">
-                    <span className="max-temp card-text">{convertToCelcius(forecast.temp.max)}&deg;</span>
-                    <span className="min-temp card-text">{convertToCelcius(forecast.temp.min)}&deg;</span>
+                    <div className="flex-container center">
+                        <span>max</span>
+                        <span className="max-temp card-text">{convertToCelcius(forecast.temp.max)}&deg;</span>
+                    </div>
+                    <div className="flex-container center">
+                        <span className="min-temp">min</span>
+                        <span className="min-temp card-text">{convertToCelcius(forecast.temp.min)}&deg;</span>
+                    </div>
                 </div>
             </div>
         </div>

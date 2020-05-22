@@ -3,7 +3,7 @@ import './App.css';
 
 import { Header } from './components/Header/Header';
 import { Overview } from './components/Overview/Overview';
-import { CurrentWeather } from './components/CurrentWeather/CurrentWeather';
+import { CurrentWeatherOverview } from './components/CurrentWeatherOverview/CurrentWeatherOverview';
 import { Forecast } from './components/Forecast/Forecast';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <div className="container">
         <div className="row overview-container mt-4">
           <Overview />
-          <CurrentWeather />
+          <CurrentWeatherOverview />
         </div>
       </div>
       <hr className="my-4" />

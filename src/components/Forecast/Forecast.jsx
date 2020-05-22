@@ -3,7 +3,7 @@ import './Forecast.scss';
 import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 
 import { ForecastList } from '../ForecastList/ForecastList';
-import { ForecastChart } from '../ForecastChart/ForecastChart';
+import { TodaysForecast } from '../TodaysForecast/TodaysForecast';
 
 export const Forecast = () => {
     return (
@@ -26,7 +26,7 @@ export const Forecast = () => {
                             <ForecastList />
                         </Route>
                         <Route path="/">
-                            <ForecastChart />
+                            <TodaysForecast />
                         </Route>
                     </Switch>
                 </div>

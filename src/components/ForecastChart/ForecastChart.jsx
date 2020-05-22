@@ -5,7 +5,6 @@ import moment from 'moment';
 
 const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=-${LONGITUDE}&appid=${API_KEY}`;
 
-
 export const ForecastChart = () => {
     const [hourlyForecast, setHourlyForecast] = useState([]);
 

@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import './CurrentWeather.scss';
+import './CurrentWeatherOverview.scss';
 import { API_KEY, LATITUDE, LONGITUDE } from '../../utils/api';
 import { convertToCelcius } from '../../utils/tempFormater';
 import Clock from 'react-live-clock';
 
 const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=-${LONGITUDE}&appid=${API_KEY}`;
 
-export const CurrentWeather = () => {
+export const CurrentWeatherOverview = () => {
     const [currentTemperature, setCurrentTemperature] = useState([]);
 
 

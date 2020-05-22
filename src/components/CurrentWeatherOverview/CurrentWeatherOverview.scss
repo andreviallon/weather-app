@@ -1,0 +1,38 @@
+.current-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: end;
+        margin: 0;
+    }
+
+    .current-date-hour {
+        display: flex;
+        flex-direction: row;
+        letter-spacing: 0.5px;
+    }
+
+    .current-hour {
+        color: #b8b8b8;
+        margin-left: 0.3rem;
+    }
+
+    .current-weather-container {
+        font-weight: 300;
+        display: flex;
+        align-items: flex-start;
+
+        .degrees {
+            font-size: 3rem;
+        }
+
+        .unit {
+            font-size: 1.2rem;
+            padding-top: 0.6rem;
+        }
+    }
+}

@@ -15,10 +15,13 @@ export const ForecastChart = () => {
     useEffect(() => {
         fetch(FORECAST_API)
             .then(response => response.json())
-            .then(json => setHourlyForecast(json.hourly));
+            .then(json => {
+                setHourlyForecast(json.hourly)
+                console.log('json =>', json)
+            });
     }, []);
 
-    hourlyForecast.map(hour => {
+    hourlyForecast.forEach(hour => {
         hours.push(moment.unix(hour.dt).format('HH'));
         temps.push((hour.temp - 273.15).toFixed(1));
     })
@@ -50,11 +53,6 @@ export const ForecastChart = () => {
         ]
     };
     return (
-        <div className="container">
-            <div className="row">
-                <h5 className="mb-4">Next 48 hours</h5>
-                <Line data={data} />
-            </div>
-        </div>
+        <Line data={data} />
     );
 }

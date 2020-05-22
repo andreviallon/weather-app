@@ -1,6 +1,6 @@
 import React from 'react';
 import './Forecast.scss';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, NavLink } from "react-router-dom";
 
 import { ForecastList } from '../ForecastList/ForecastList';
 import { ForecastChart } from '../ForecastChart/ForecastChart';
@@ -11,22 +11,22 @@ export const Forecast = () => {
             <div className="container">
                 <div className="row">
                     <nav className="mb-3">
-                        <ul className="nav">
+                        <ul className="nav nav-pills" role="tablist">
                             <li className="nav-item mr-2">
-                                <Link to="/">Weekly</Link>
+                                <NavLink className="nav-link" exact={true} activeClassName="active" to="/">Today</NavLink>
                             </li>
                             <li className="nav-item">
-                                <Link to="/today">Next 48h</Link>
+                                <NavLink className="nav-link" activeClassName="active" to="/nextweek">Next Week</NavLink>
                             </li>
                         </ul>
                     </nav>
 
                     <Switch>
-                        <Route path="/today">
-                            <ForecastChart />
+                        <Route path="/nextweek">
+                            <ForecastList />
                         </Route>
                         <Route path="/">
-                            <ForecastList />                        
+                            <ForecastChart />
                         </Route>
                     </Switch>
                 </div>

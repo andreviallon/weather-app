@@ -16,13 +16,21 @@ export const CurrentWeather = () => {
             .then(json => setCurrentTemperature(json.current.temp));
     }, []);
 
-    const date = new Date();
-    const weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentDate = new Date();
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    const displayDate = () => {
+        const day = weekdays[currentDate.getDay()];
+        const month = months[currentDate.getMonth()];
+        const date = currentDate.getDate();
+        return `${day} ${month} ${date}`;
+    }
 
     return (
         <div className="flex-container current-container">
             <div className="current-date-hour">
-                <p className="current-day">{weekday[date.getDay()]},</p>
+                 <p className="current-day"> {displayDate()},</p>
                 <p className="current-hour">
                     <Clock format="HH.mm" interval={1000} ticking={true} />
                 </p>

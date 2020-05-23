@@ -4,6 +4,7 @@ import { WeatherContext } from '../../context/WeatherState';
 import { ForecastChart } from '../ForecastChart/ForecastChart';
 import { CurrentWeatherDetailsCard } from '../CurrentWeatherDetailsCard/CurrentWeatherDetailsCard';
 import { SunriseAndSunsetCard } from '../SunriseAndSunsetCard/SunriseAndSunsetCard';
+import { HumidityCard } from '../HumidityCard/HumudityCard';
 import './TodaysForecast.scss';
 
 export const TodaysForecast = () => {
@@ -23,6 +24,9 @@ export const TodaysForecast = () => {
                     </div>
                     <div className="col-sm-12 col-md-4 d-flex align-items-stretch">
                         <SunriseAndSunsetCard weather={weather.current} />
+                    </div>
+                    <div className="col-sm-12 col-md-4 d-flex align-items-stretch">
+                        <HumidityCard weather={weather.current} />
                     </div>
                 </React.Fragment>
             );

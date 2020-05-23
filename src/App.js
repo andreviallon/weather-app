@@ -6,9 +6,11 @@ import { Overview } from './components/Overview/Overview';
 import { CurrentWeatherOverview } from './components/CurrentWeatherOverview/CurrentWeatherOverview';
 import { Forecast } from './components/Forecast/Forecast';
 
+import { WeatherProvider } from './context/WeatherState';
+
 function App() {
   return (
-    <div className="App">
+    <WeatherProvider className="App">
       <Header />
       <div className="container">
         <div className="row overview-container mt-4">
@@ -22,7 +24,7 @@ function App() {
           <Forecast />
         </div>
       </div>
-    </div>
+    </WeatherProvider>
   );
 }
 

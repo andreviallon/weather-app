@@ -14,10 +14,7 @@ export const ForecastChart = () => {
     useEffect(() => {
         fetch(FORECAST_API)
             .then(response => response.json())
-            .then(json => {
-                setHourlyForecast(json.hourly)
-                console.log('json =>', json)
-            });
+            .then(json => setHourlyForecast(json.hourly));
     }, []);
 
     hourlyForecast.forEach(hour => {

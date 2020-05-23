@@ -1,0 +1,16 @@
+.overview-container {
+    justify-content: space-between;
+}
+
+.current-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        text-align: end;
+        margin: 0;
+    }
+}

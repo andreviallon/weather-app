@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Line } from 'react-chartjs-2';
-import { API_KEY, LATITUDE, LONGITUDE } from '../../utils/api';
 import moment from 'moment';
 
-const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=-${LONGITUDE}&appid=${API_KEY}`;
-
-export const ForecastChart = () => {
-    const [hourlyForecast, setHourlyForecast] = useState([]);
-
+export const ForecastChart = ({ forecast }) => {
     let hours = [];
     let temps = [];
 
-    useEffect(() => {
-        fetch(FORECAST_API)
-            .then(response => response.json())
-            .then(json => setHourlyForecast(json.hourly));
-    }, []);
-
-    hourlyForecast.forEach(hour => {
+    forecast.forEach(hour => {
         hours.push(moment.unix(hour.dt).format('HH'));
         temps.push((hour.temp - 273.15).toFixed(1));
     })
@@ -48,7 +37,13 @@ export const ForecastChart = () => {
             }
         ]
     };
+
     return (
-        <Line data={data} />
+        <div className="card">
+            <div className="card-body">
+                <h5 className="card-title">Next 48 hours temperature</h5>
+                <Line data={data} />
+            </div>
+        </div>
     );
 }

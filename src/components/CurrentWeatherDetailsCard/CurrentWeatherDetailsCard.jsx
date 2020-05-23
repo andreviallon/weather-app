@@ -9,10 +9,11 @@ export const CurrentWeatherDetailsCard = ({ weather }) => {
         <div className="card">
             <div className="card-body">
                 <h5 className="card-title">Weather Details</h5>
-
-                <img className="forecast-img" src={imgUrl} alt="forecast icon" />
-                <div className="flex-container center mt-2">
-                    <span className="card-text">{weather.description}</span>
+                <div className="card-content">
+                    <img className="forecast-img" src={imgUrl} alt="forecast icon" />
+                    <div className="flex-container center mt-2">
+                        <span className="card-text">{weather.description}</span>
+                    </div>
                 </div>
             </div>
         </div>

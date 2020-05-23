@@ -17,12 +17,14 @@ export const ForecastList = () => {
 
     if (dailyForecasts) {
         return (
-            <div className="forecast-list-container">
-                {dailyForecasts.map((forecast, index) => (
-                    <ForecastCard
-                        key={index}
-                        forecast={forecast} />
-                ))}
+            <div className="container">
+                <div className="row">
+                    {dailyForecasts.map((forecast, index) => (
+                        <div className="col-lg-3 col-md-6 col-sx-12" key={index}>
+                            <ForecastCard forecast={forecast} />
+                        </div>
+                    ))}
+                </div>
             </div>
         );
     } else {

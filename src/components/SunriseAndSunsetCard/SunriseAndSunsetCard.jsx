@@ -14,7 +14,7 @@ export const SunriseAndSunsetCard = ({ weather }) => {
             <div className="card-body">
                 <h5 className="card-title">Sunrise & Sunset</h5>
 
-                <div className="mt-4">
+                <div className="card-content">
                     <div className="flex-container center">
                         <div className="sunrise">
                             <img src={sunrise} alt="sunrise" />

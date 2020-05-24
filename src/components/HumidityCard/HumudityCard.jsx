@@ -2,9 +2,6 @@ import React from 'react';
 import './HumudityCard.scss';
 
 export const HumidityCard = ({ weather }) => {
-
-    console.log('weather', weather);
-
     return (
         <div className="card">
             <div className="card-body">

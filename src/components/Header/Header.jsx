@@ -8,7 +8,7 @@ export const Header = () => {
             <a className="navbar-brand" href="/">Weather App</a>
                 <a target="_blank"
                     rel="noopener noreferrer"
-                    href="https://github.com/andreviallon/react-hooks-todo-app">
+                    href="https://github.com/andreviallon/weather-app">
                     <button className="btn btn-primary">View in GitHub</button>
                 </a>
         </nav>

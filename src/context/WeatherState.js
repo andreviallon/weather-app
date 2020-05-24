@@ -7,7 +7,6 @@ const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATI
 
 const initialState = {
     weather: {},
-    loading: true
 }
 
 export const WeatherContext = createContext(initialState);
@@ -18,13 +17,12 @@ export const WeatherProvider = ({ children }) => {
     async function getWeather() {
         try {
             const res = await axios.get(FORECAST_API);
-            console.log('res', res.data);
             dispatch({
                 type: 'GET_WEATHER',
                 payload: res.data
             })
         } catch(err) {
-            console.log('err =>', err);
+            alert(err);
         }
     }
 
@@ -32,7 +30,6 @@ export const WeatherProvider = ({ children }) => {
         <WeatherContext.Provider
             value={{
                 weather: state.weather,
-                loading: state.loading,
                 getWeather
             }}>
             {children}

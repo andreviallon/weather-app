@@ -1,19 +1,15 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useContext } from 'react';
 import './CurrentWeatherOverview.scss';
-import { API_KEY, LATITUDE, LONGITUDE } from '../../utils/api';
+import { WeatherContext } from '../../context/WeatherState';
 import { convertToCelcius } from '../../utils/tempFormater';
 import Clock from 'react-live-clock';
 
-const FORECAST_API = `https://api.openweathermap.org/data/2.5/onecall?lat=${LATITUDE}&lon=-${LONGITUDE}&appid=${API_KEY}`;
-
 export const CurrentWeatherOverview = () => {
-    const [currentTemperature, setCurrentTemperature] = useState([]);
-
+    const { weather, getWeather } = useContext(WeatherContext);
 
     useEffect(() => {
-        fetch(FORECAST_API)
-            .then(response => response.json())
-            .then(json => setCurrentTemperature(json.current.temp));
+        getWeather();
     }, []);
 
     const currentDate = new Date();
@@ -27,16 +23,20 @@ export const CurrentWeatherOverview = () => {
         return `${day} ${month} ${date}`;
     }
 
+    const displayTemp = () => {
+        if (weather.current) return <span className="degrees">{convertToCelcius(weather.current.temp)}</span>;
+    }
+
     return (
         <div className="flex-container current-container">
             <div className="current-date-hour">
-                 <p className="current-day"> {displayDate()},</p>
+                <p className="current-day">{displayDate()},</p>
                 <p className="current-hour">
                     <Clock format="HH.mm" interval={1000} ticking={true} />
                 </p>
             </div>
             <div className="current-weather-container">
-                <span className="degrees">{convertToCelcius(currentTemperature)}</span>
+                {displayTemp()}
                 <span className="unit">&#8451;</span>
             </div>
         </div>

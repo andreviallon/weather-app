@@ -15,7 +15,6 @@ export const TodaysForecast = () => {
     }, []);
 
     function displayCards() {
-        console.log('weather', weather);
         if (weather.current) {
             return (
                 <React.Fragment>
@@ -34,7 +33,6 @@ export const TodaysForecast = () => {
     }
 
     function displayChart() {
-        console.log('weather', weather);
         if (weather.hourly) {
             return (
                 <div className="col-12 mt-4">

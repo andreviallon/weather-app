@@ -6,9 +6,6 @@ import sunrise from '../../assets/sunrise.svg';
 import sunset from '../../assets/sunset.svg';
 
 export const SunriseAndSunsetCard = ({ weather }) => {
-
-    console.log('weather', weather);
-
     return (
         <div className="card">
             <div className="card-body">

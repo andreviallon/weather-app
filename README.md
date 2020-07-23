@@ -1,6 +1,6 @@
 # React Weather App
 
-See the app as well as the code at https://jovial-williams-ca9530.netlify.app/
+See the app running live at https://jovial-williams-ca9530.netlify.app/
 
 ## What I Learned
 

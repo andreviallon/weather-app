@@ -1,12 +1,12 @@
-# React Weather App
+# Weather App
 
 See the app running live at https://jovial-williams-ca9530.netlify.app/
 
-## What I Learned
+## Technologies Used
 
 * React (functional components / React Hooks)
-* State Management with React's context API
-* Navigation with React Router
+* React context API
+* React Router
 * Working with 3rd party libraries (Chartjs, Moment, Clock and Axios)
 * Deploy to Netlify
 
